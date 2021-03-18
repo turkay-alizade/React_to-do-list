@@ -1,0 +1,118 @@
+$blue:#9ED2E0;
+body{
+    margin:0;
+    padding:0;
+}
+section{
+    height: 100vh;
+    width: 100%;
+    background: $blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    form{
+        overflow: auto;
+        height: 70vh;
+        width: 400px;
+        background: rgba(255,255,255,0.7);
+        border-radius: 15px;
+        padding-top:20px;
+        
+        .form{
+            display: flex;
+            justify-content: center;
+            flex-wrap: nowrap;
+        }
+        input{
+            height: 45px;
+            width: 250px;
+            border:none;
+            border-radius:5px;
+            background: #F9B0A7	;
+            font-size: 17px;
+            color: white;
+            &::placeholder{
+                color: white;
+            }
+            &:focus{
+                outline:none;
+            }
+        }
+        button{
+            color: white;
+            border: none;
+            border-radius: 5px;
+            background: $blue;
+            width: 80px;
+            margin-left: 20px;
+            cursor: pointer;
+            font-size: 17px;
+            &:focus{
+                outline:none;
+            }
+        }
+    }
+    .list{
+        width: 300px;
+        margin:20px auto;
+        padding: 0px 15px;
+        height: 40px;
+        line-height: 2;
+        border-radius:5px;
+        background: #FDD340;
+        position: relative;
+        p{
+            input{
+                font-size:18px;
+                color:white;
+                height: inherit;
+                width: inherit;
+                background: transparent;
+                margin:0;
+                border-radius:0;
+            }
+           
+        }
+    }
+}
+@media screen and (max-width:500px){
+    section{
+        .list{
+            width: initial;
+            margin:20px;
+        }
+        form{
+            width: 100%;
+            margin:20px;
+            padding:20px 5px;
+            button{
+                width:30%;
+                margin-left:5px;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+            input{
+                width:65% !important;
+                margin-left:0;
+            }
+        }
+    }
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 6px;
+    right: 10px;
+  .delete-icon {
+    margin-left: 5px;
+    color: #fff;
+  }
+  .edit-icon {
+    color: #fff;
+  }
+}
